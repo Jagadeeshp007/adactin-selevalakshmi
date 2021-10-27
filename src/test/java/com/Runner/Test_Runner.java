@@ -33,6 +33,6 @@ public class Test_Runner {
 
 	@AfterClass
 	public static void tear_Down() {
-//		driver.close();
+		driver.close();
 	}
 }
