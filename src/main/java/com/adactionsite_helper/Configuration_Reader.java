@@ -2,7 +2,6 @@ package com.adactionsite_helper;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.util.Properties;
 
 
@@ -11,9 +10,9 @@ public class Configuration_Reader {
 	
 	public static Properties p;
 
-	public void getusername() throws Throwable {
+	public Configuration_Reader() throws Throwable {
     
-	File f = new File("C:\\Users\\Admin\\eclipse-workspace\\Adaction_Task\\src\\main\\java\\com\\adactionsite_helper\\Configuration.properties2");
+	File f = new File(".\\src\\main\\java\\com\\adactionsite_helper\\Configuration.properties2");
     FileInputStream fis = new  FileInputStream(f);
     p = new Properties();
     p.load(fis);

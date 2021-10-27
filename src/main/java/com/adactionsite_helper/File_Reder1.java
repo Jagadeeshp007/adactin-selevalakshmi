@@ -1,13 +1,10 @@
 package com.adactionsite_helper;
 
-import java.io.FileReader;
-
-import com.helper.Configuration_Reder;
 
 public class File_Reder1 {
 
 	 private File_Reder1() {
-		 
+		 // to restrict to access another class
 	}
 	
 	public static File_Reder1 getInstanceFRM() {
@@ -17,12 +14,10 @@ public class File_Reder1 {
 	}
 	
 	
-	
-	
-	public Configuration_Reder getInstanceCR() throws Throwable {
-
-		Configuration_Reder reder = new Configuration_Reder();
+	public Configuration_Reader getInstanceCR() throws Throwable {
+		Configuration_Reader reder = new Configuration_Reader();
 		return reder;
 	}
+	
 	
 }

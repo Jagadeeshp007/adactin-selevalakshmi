@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class Hotel_Page {
 	
-     public static WebDriver driver;
+     public  WebDriver driver;
 	
 	
 	 @FindBy(id = "radiobutton_0")
@@ -16,8 +16,8 @@ public class Hotel_Page {
 	 @FindBy(id ="continue" )
 	 private WebElement Continue;
 
-	public Hotel_Page(WebDriver driver) {
-     this.driver=driver;
+	public Hotel_Page(WebDriver driver2) {
+     this.driver=driver2;
      PageFactory.initElements(driver, this);
 	}
 

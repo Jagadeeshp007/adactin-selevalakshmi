@@ -6,43 +6,35 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class Home_Page {
-	
-	public static WebDriver driver;
-	
-@FindBy(xpath = "//input[@type='text']")
-private WebElement username;
 
-@FindBy(id="password")
-private WebElement password;
+	public  WebDriver driver;
 
-@FindBy(id="login")
-private WebElement loginbtn;
+	@FindBy(xpath = "//input[@type='text']")
+	private WebElement username;
 
-public Home_Page(WebDriver driver2) {
+	@FindBy(id = "password")
+	private WebElement password;
 
-	this.driver=driver2;
-	PageFactory.initElements(driver, this);
-	
-}
+	@FindBy(id = "login")
+	private WebElement loginbtn;
 
-public WebElement getUsername() {
-	return username;
-}
+	public Home_Page(WebDriver driver2) {
 
-public WebElement getPassword() {
-	return password;
-}
+		this.driver = driver2;
+		PageFactory.initElements(driver, this);
 
-public WebElement getLoginbtn() {
-	return loginbtn;
-}
+	}
 
+	public WebElement getUsername() {
+		return username;
+	}
 
+	public WebElement getPassword() {
+		return password;
+	}
 
-
-
-
-
-
+	public WebElement getLoginbtn() {
+		return loginbtn;
+	}
 
 }

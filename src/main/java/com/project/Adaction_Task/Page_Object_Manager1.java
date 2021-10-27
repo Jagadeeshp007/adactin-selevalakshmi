@@ -3,15 +3,15 @@ package com.project.Adaction_Task;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
-import com.Pom_Class1.Booking_Page;
-import com.Pom_Class1.Confirmation_Page;
-import com.Pom_Class1.Home_Page;
-import com.Pom_Class1.Hotel_Page;
-import com.Pom_Class1.Login_Page;
+import com.adactionsite_pomclass.Booking_Page;
+import com.adactionsite_pomclass.Confirmation_Page;
+import com.adactionsite_pomclass.Home_Page;
+import com.adactionsite_pomclass.Hotel_Page;
+import com.adactionsite_pomclass.Login_Page;
 
 public class Page_Object_Manager1 {
 	
- public static WebDriver driver;
+ public  WebDriver driver;
  
  private Home_Page hp;
  
@@ -26,7 +26,7 @@ public class Page_Object_Manager1 {
  public Page_Object_Manager1(WebDriver driver2) {
  
 	 this.driver=driver2;
-	 PageFactory.initElements(driver2, this);
+	 PageFactory.initElements(driver, this);
  
  }
 

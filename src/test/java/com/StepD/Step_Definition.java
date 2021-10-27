@@ -2,9 +2,9 @@ package com.StepD;
 
 import org.openqa.selenium.WebDriver;
 
-import com.Adaction_Class.Base_Class1;
-import com.Adaction_Class.Page_Object_Manager1;
 import com.Runner.Test_Runner;
+import com.adactionsite_baseclass.Base_Class1;
+import com.project.Adaction_Task.Page_Object_Manager1;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -19,11 +19,6 @@ public class Step_Definition extends Base_Class1 {
 	public void user_Lunch_The_Application() throws Throwable {
 		getUrl("https://adactinhotelapp.com/index.php");
 	}
-
-//	@Given("^user Lunch The Application For Adactin$")
-//	public void user_Lunch_The_Application_For_Adactin() throws Throwable {
-//
-//	}
 
 	@When("^user Enter The User Name In Username Field$")
 	public void user_Enter_The_User_Name_In_Username_Field() throws Throwable {
@@ -45,9 +40,10 @@ public class Step_Definition extends Base_Class1 {
 		dropdown(pom.getInstenceLP().getLocation(), "by index", "2");
 	}
 
-	@When("^user Select The Hotels$")
-	public void user_Select_The_Hotels() throws Throwable {
+	@When("^user Select The Hotel$")
+	public void user_Select_The_Hotel() throws Throwable {
 		dropdown(pom.getInstenceLP().getHotel(), "by index", "4");
+
 	}
 
 	@When("^user Select The Rome Type$")
@@ -83,13 +79,26 @@ public class Step_Definition extends Base_Class1 {
 
 	@Then("^user Click On The Search Button And It Navigate To The Select Hotel Page$")
 	public void user_Click_On_The_Search_Button_And_It_Navigate_To_The_Select_Hotel_Page() throws Throwable {
+		clickonElement(pom.getInstenceLP().getSubmit());
+		pageWait(30);
+
+	}
+
+	@When("^user Select The Conform Hotel$")
+	public void user_Select_The_Conform_Hotel() throws Throwable {
 		clickonElement(pom.getInstenceH().getRd1());
 	}
 
 	@Then("^user Click On The Continue Button And It Navigate To The Book A Hotel Page$")
 	public void user_Click_On_The_Continue_Button_And_It_Navigate_To_The_Book_A_Hotel_Page() throws Throwable {
 		clickonElement(pom.getInstenceH().getContinue());
+		pageWait(30);
 
+	}
+
+	@When("^user Enter The Firstname In Firstname Field$")
+	public void user_Enter_The_Firstname_In_Firstname_Field() throws Throwable {
+		inputvalueElement(pom.getInstanceBP().getFirstnm(), "Selvalakshmi");
 	}
 
 	@When("^user Enter The Lastname In Lastname Field$")
@@ -124,11 +133,12 @@ public class Step_Definition extends Base_Class1 {
 
 	@When("^user Enter The CCV Num In The CCV Num Field$")
 	public void user_Enter_The_CCV_Num_In_The_CCV_Num_Field() throws Throwable {
-		inputvalueElement(pom.getInstanceBP().getCCV(), "1234");
+		inputvalueElement(pom.getInstanceBP().getCCV(), "1234123456789098");
 	}
 
 	@Then("^user Click On The Book Now Button And It Navigate To The Booking Confirmation Page$")
 	public void user_Click_On_The_Book_Now_Button_And_It_Navigate_To_The_Booking_Confirmation_Page() throws Throwable {
+		clickonElement(pom.getInstanceBP().getBook());
 	}
 
 }

@@ -4,9 +4,9 @@ package Adaction_Oct;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
-import com.Adaction_Class.Base_Class1;
-import com.Adaction_Class.Page_Object_Manager1;
-import com.config.properties1.File_Reder1;
+import com.adactionsite_baseclass.Base_Class1;
+import com.adactionsite_helper.File_Reder1;
+import com.project.Adaction_Task.Page_Object_Manager1;
 
 
 public class Adaction_Hotal extends Base_Class1 {
@@ -19,11 +19,11 @@ public class Adaction_Hotal extends Base_Class1 {
 		
 		getUrl("http://adactinhotelapp.com/SearchHotel.php");
 		
-		String username = File_Reder1.getInstanceFRM().getInstanceCR().getusername();
+//		String username = File_Reder1.getInstanceFRM().getInstanceCR().getUsername();
 		
 		inputvalueElement(pom.getInstenceHP().getUsername(),"Selvalakshmi");
 		
-		String password = File_Reder1.getInstanceFRM().getInstanceCR().getpassword();
+		String password = File_Reder1.getInstanceFRM().getInstanceCR().getPassword();
 		
 		inputvalueElement(pom.getInstenceHP().getPassword(), password);
 		
